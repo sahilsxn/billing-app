@@ -21,15 +21,15 @@ const ProductItem = (props) => {
     }
 
     return (
-        <div>
+        <div className="card mb-3">
             {toggle ?
             <EditProduct product={product} handleToggle={handleToggle}/>
             :
-            <div>
+            <div className="d-flex justify-content-between p-3">
                 <b>{product.name}</b>
                 <p>₹ {product.price}</p>
-                <button onClick={handleDelete}>Delete</button>
-                <button onClick={handleToggle}>Edit Details</button>
+                <button className="btn btn-secondary" onClick={handleToggle}>Edit Details</button>
+                <button className="btn btn-danger mx-3" onClick={handleDelete}>Delete</button>
                 <p></p>
             </div>
             }
