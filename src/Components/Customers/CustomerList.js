@@ -53,13 +53,11 @@ const CustomerList = (props) => {
     }
 
     return (
-        <div className="row mb-5 mt-5">
+        <div>
             <h3>List of Customers</h3>
-            <div className="col-md-4">
             <input type="search" placeholder="Search by phone or mobile" value={search} onChange={handleSearchChange}/>
-            </div>
             <p></p>
-            <div className="col-md-4">
+            <div>
                 <select value={sort} onChange={handleSortChange}>
                     <option value="">Sort By: None</option>
                     <option value="ascName">Name A-Z</option>
@@ -79,14 +77,12 @@ const CustomerList = (props) => {
             }): <h3>No Customers Added</h3>}
             </div>
             }
-            <div className="col-md-4">
             <ReactPaginate
             previousLabel={"Previous"}
             pageCount={pageCount}
             nextLabel={"Next"}
             onPageChange={changePage}
             />
-            </div>
         </div>
     )
 }

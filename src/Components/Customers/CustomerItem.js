@@ -21,16 +21,16 @@ const CustomerItem = (props) => {
     }
 
     return (
-        <div className="card mb-3">
+        <div>
             {toggle ?
             <EditCustomer customer={customer} handleToggle={handleToggle}/>
             :
-            <div className="d-flex justify-content-between p-3 align-items-center">
+            <div>
                 <b>{customer.name}</b>
                 <p>{customer.email}</p>
                 <p>{customer.mobile}</p>
-                <button className="btn btn-secondary"  onClick={handleToggle}>Edit Details</button>
-                <button className="btn btn-danger mx-3" onClick={handleDelete}>Delete</button>
+                <button onClick={handleDelete}>Delete</button>
+                <button onClick={handleToggle}>Edit Details</button>
                 <p></p>
             </div>
             }
